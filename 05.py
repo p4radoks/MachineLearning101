@@ -11,6 +11,7 @@ df.columns=["Class", "Specimen_Number", "Eccentricity", "Aspect_Ratio", "Elongat
          "Solidity", "Stochastic_Convexity", "Isoperimetric_Factor", "Maximal_Indendation_Depth",
          "Lobedness", "Average_Intensity", "Average_Contrast", "Smoothness", "Third_moment", "Uniformity", "Entropy"]
 
+df.drop(["Specimen_Number"], 1, inplace=True)
 
 X = df.drop(["Class"], axis=1)
 y = df["Class"]
